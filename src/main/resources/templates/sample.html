@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>병역일터 채용공고</title>
+    <meta charset="UTF-8">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <!-- 헤더 부분 -->
+    <header>
+        <h1>병역일터 채용공고</h1>
+        <hr size="10" align="center" width=100% noshade="noshade"></hr>
+    </header>
+    <!-- fieldset 부분 -->
+    <fieldset>
+        <legend>검색</legend>
+        <form>
+            <p>업체명 : <input type="text" placeholder="업체명"/></p>
+            <p>업종구분명 : 
+                <select>
+                    <option>-전체-</option>
+                    <option>철강</option>
+                    <option>기계</option>
+                    <option>전기</option>
+                    <option>전자</option>
+                    <option>화학</option>
+                    <option>섬유</option>
+                    <option>신발</option>
+                    <option>시멘요업</option>
+                    <option>생활용품</option>
+                    <option>통신기기</option>
+                    <option>정보처리</option>
+                    <option>게임S/W</option>
+                    <option>영상게임</option>
+                    <option>의료의약</option>
+                    <option>식음료</option>
+                    <option>농산물가공</option>
+                    <option>수산물가공</option>
+                    <option>임산물가공</option>
+                    <option>동물약품</option>
+                    <option>애니메이션</option>
+                    <option>석탄채굴</option>
+                    <option>일반광물채굴</option>
+                    <option>선광제련</option>
+                    <option>에너지</option>
+                    <option>국내건설</option>
+                    <option>국외건설</option>
+                    <option>내항화물</option>
+                    <option>외항화물</option>
+                    <option>내항선박관리</option>
+                    <option>외항선박관리</option>
+                    <option>근해</option>
+                    <option>원양</option>
+                </select>
+            </p>
+            <p>근무지 주소 : 
+                <select>
+                    <option>-전체-</option>
+                    <option>서울특별시</option>
+                    <option>부산광역시</option>
+                    <option>대구광역시</option>
+                    <option>인천광역시</option>
+                    <option>광주광역시</option>
+                    <option>대전광역시</option>
+                    <option>울산광역시</option>
+                    <option>세종특별자치시</option>
+                    <option>경기도</option>
+                    <option>충청북도</option>
+                    <option>충청남도</option>
+                    <option>전라북도</option>
+                    <option>전라남도</option>
+                    <option>경상북도</option>
+                    <option>경상남도</option>
+                    <option>제주특별자치도</option>
+                    <option>강원특별자치도</option>
+                </select>
+            </p>
+            <p>마감일자 : <input type="date"/></p>
+            <p><input type="submit" value="조회"/>
+                <input type="reset" value="초기화"/>
+            </p>
+        </form>
+    </fieldset>
+    <hr align="center" width=50%></hr>
+    <!-- table 부분 -->
+    <table>
+        <thead>
+            <tr>
+                <th>업체명</th>
+                <th>업종구분명</th>
+                <th>근무지 주소</th>
+                <th>마감일자</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="http://www.abc.com">엔아이비</a></td>
+                <td>철강</td>
+                <td>전라북도 전주시 덕진구 여의동</td>
+                <td>31/05/2016</td>
+            </tr>
+            <tr>
+                <td><a href="http://www.xyz.com">ABC 기계</a></td>
+                <td>기계</td>
+                <td>서울특별시 마포구 상암동</td>
+                <td>05/08/2023</td>
+            </tr>
+            <!-- 다른 업체 정보를 추가할 수 있습니다 -->
+        </tbody>
+    </table>
+    <!-- 사이트 정보 부분 -->
+    <hr align="center" width=100%></hr>
+    <footer>
+        <small>njm1250, jtk134 ®2023</small>
+    </footer>
+</body>
+</html>
