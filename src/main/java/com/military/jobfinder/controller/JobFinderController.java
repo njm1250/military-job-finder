@@ -1,5 +1,6 @@
 package com.military.jobfinder.controller;
 
+import com.military.jobfinder.service.DatabaseInitializer;
 import com.military.jobfinder.service.JobFinderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,6 +29,4 @@ public class JobFinderController {
         String data = jobFinderService.getApiData();
         return data;
     }
-
-
 }
