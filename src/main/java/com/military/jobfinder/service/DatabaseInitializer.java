@@ -60,12 +60,7 @@ public class DatabaseInitializer {
                 String recruitTitle = item.get("cyjemokNm").toString(); // 채용제목
                 String respPerson = item.get("damdangjaFnm").toString(); // 담당자
 
-
-
-
                 String companyName = item.get("eopcheNm").toString(); // 업체이름
-
-
 
                 api.setWelfare(welfare);
                 api.setFinalEdu(finalEdu);
