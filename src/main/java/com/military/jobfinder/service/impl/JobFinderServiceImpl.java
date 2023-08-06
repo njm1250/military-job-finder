@@ -28,7 +28,7 @@ public class JobFinderServiceImpl implements JobFinderService {
         HttpClient client = HttpClient.newHttpClient();
         Map<String, String> parameters = Map.of(
                 "serviceKey", SERVICE_KEY,
-                "numOfRows", "2",
+                "numOfRows", "10",
                 "pageNo", "1"
         );
         String params = parameters.entrySet().stream()
