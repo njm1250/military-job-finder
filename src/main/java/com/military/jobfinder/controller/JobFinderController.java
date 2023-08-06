@@ -25,10 +25,9 @@ public class JobFinderController {
         this.apiRepository = apiRepository;
     }
 
-    @GetMapping("/")
-    @ResponseBody
-    public String test() {
-        return "TEST";
+    @GetMapping("/sample")
+    public String sample() {
+        return "sample";
     }
 
     @GetMapping("/getRecruitInfo")
