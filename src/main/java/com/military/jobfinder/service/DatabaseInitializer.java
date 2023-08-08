@@ -20,10 +20,12 @@ public class DatabaseInitializer {
 
     private final ApiRepository apiRepository;
     private final JobFinderService jobFinderService;
+    private final ObjectMapper mapper;
 
-    public DatabaseInitializer(ApiRepository apiRepository, JobFinderService jobFinderService) {
+    public DatabaseInitializer(ApiRepository apiRepository, JobFinderService jobFinderService, ObjectMapper mapper) {
         this.apiRepository = apiRepository;
         this.jobFinderService = jobFinderService;
+        this.mapper = mapper;
     }
 
     // 모든 Spring Bean 이 완전히 생성되고 @PostConstruct callback 이 호출된 후에 발생하는 Event
@@ -32,7 +34,6 @@ public class DatabaseInitializer {
         try {
             String apiData = jobFinderService.getApiData(); // fetch API JSON Data
             // jackson 을 사용하여 JSON handling
-            ObjectMapper mapper = new ObjectMapper();
             Map<String, Object> responseMap = mapper.readValue(apiData, Map.class); // Json to Java Map Object
             Map<String, Object> body = (Map<String, Object>) ((Map<String, Object>) responseMap.get("response")).get("body");
             Map<String, Object> items = (Map<String, Object>) body.get("items");
