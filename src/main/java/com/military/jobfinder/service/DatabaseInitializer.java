@@ -5,9 +5,11 @@ import com.military.jobfinder.entity.Api;
 import com.military.jobfinder.repository.ApiRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -22,6 +24,7 @@ public class DatabaseInitializer {
     private final JobFinderService jobFinderService;
     private final ObjectMapper mapper;
 
+    @Autowired
     public DatabaseInitializer(ApiRepository apiRepository, JobFinderService jobFinderService, ObjectMapper mapper) {
         this.apiRepository = apiRepository;
         this.jobFinderService = jobFinderService;
@@ -30,6 +33,7 @@ public class DatabaseInitializer {
 
     // 모든 Spring Bean 이 완전히 생성되고 @PostConstruct callback 이 호출된 후에 발생하는 Event
     @EventListener(ApplicationReadyEvent.class)
+    @Transactional
     public void populateDatabase() throws Exception {
         try {
             String apiData = jobFinderService.getApiData(); // fetch API JSON Data
